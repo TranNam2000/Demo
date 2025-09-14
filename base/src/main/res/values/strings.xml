@@ -1,0 +1,5 @@
+<resources>
+    <string name="do_you_want_to_exit">Do you want to exit ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+</resources>

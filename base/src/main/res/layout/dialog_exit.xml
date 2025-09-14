@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_bg_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:gravity="center_horizontal"
+        android:text="@string/do_you_want_to_exit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:layout_marginBottom="@dimen/_48dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_bg_cancle"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sp" />
+
+        <Space
+            android:layout_width="@dimen/_12dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:textStyle="bold"
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_bg_confirm"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16sp" />
+    </LinearLayout>
+</LinearLayout>
