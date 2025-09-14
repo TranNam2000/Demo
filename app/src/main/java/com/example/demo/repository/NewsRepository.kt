@@ -5,12 +5,17 @@ import com.app.base.common.State
 import com.example.demo.cache.NewsCache
 import com.example.demo.model.DeatilResponse
 import com.example.demo.model.NewsItem
-import com.example.demo.network.NetworkModule
+import com.example.demo.network.ApiService
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NewsRepository(private val context: Context) {
-    private val apiService = NetworkModule.apiService
+class NewsRepository @Inject constructor(
+    @ApplicationContext private val context: Context,
+    private val apiService: ApiService
+) {
+
     private val newsCache = NewsCache.getInstance(context)
 
     suspend fun fetchNewsfeed(): State<List<NewsItem>> {
@@ -44,7 +49,7 @@ class NewsRepository(private val context: Context) {
                     return State.Error("Details not found")
                 }
                 newsCache.saveDetails(details)
-                State.Success( details )
+                State.Success(details)
             }
         } catch (e: Exception) {
             State.Error(e.message ?: "Unknown error")

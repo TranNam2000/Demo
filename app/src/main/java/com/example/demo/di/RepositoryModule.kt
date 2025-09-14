@@ -1,5 +1,6 @@
 package com.example.demo.di
 
+import com.example.demo.network.ApiService
 import com.example.demo.repository.NewsRepository
 import dagger.Module
 import dagger.Provides
@@ -15,8 +16,9 @@ object RepositoryModule {
     @Provides
     @Singleton
     fun provideNewsRepository(
-        @ApplicationContext context: android.content.Context
+        @ApplicationContext context: android.content.Context,
+        apiService: ApiService
     ): NewsRepository {
-        return NewsRepository(context)
+        return NewsRepository(context, apiService)
     }
 }
