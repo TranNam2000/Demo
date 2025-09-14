@@ -1,15 +1,9 @@
 package com.example.demo.ui.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.app.base.BaseFragmentWithBinding
 import com.example.demo.R
 import com.example.demo.databinding.FragmentMainBinding
-import com.example.demo.fragment.NewsfeedFragment
-import com.example.demo.ui.fragment.AccountFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

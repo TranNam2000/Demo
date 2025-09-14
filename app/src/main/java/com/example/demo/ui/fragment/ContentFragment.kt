@@ -63,7 +63,7 @@ class ContentFragment : BaseFragmentWithBinding<FragmentContentBinding>() {
                 is State.Success -> {
                     binding.progressBar.visibility = View.GONE
                     binding.errorText.visibility = View.GONE
-                    adapter.submitList(state.data as List<NewsItem>?, true)
+                    adapter.submitList(state.data, true)
                 }
 
                 is State.Error -> {
