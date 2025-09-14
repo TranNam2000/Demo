@@ -21,7 +21,6 @@
 
 - Load dữ liệu từ API: `https://raw.githubusercontent.com/Akaizz/static/master/newsfeed.json`
 - Hiển thị danh sách tin tức với RecyclerView
-- Pull-to-refresh để cập nhật dữ liệu
 - Click vào item để xem chi tiết
 
 ### 2. Màn hình Account
