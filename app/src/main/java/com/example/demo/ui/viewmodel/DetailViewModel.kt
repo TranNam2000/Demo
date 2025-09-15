@@ -24,11 +24,7 @@ class DetailViewModel @Inject constructor(
             _detailState.value = State.Loading
             try {
                 val detail = repository.fetchDetails()
-                if (true) {
-                    _detailState.value = detail
-                } else {
-                    _detailState.value = State.Error("Detail not found")
-                }
+                _detailState.value = detail
             } catch (e: Exception) {
                 _detailState.value = State.Error(e.message ?: "Unknown error")
             }
